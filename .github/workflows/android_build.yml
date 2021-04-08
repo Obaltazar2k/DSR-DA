@@ -24,8 +24,11 @@ jobs:
           java-version: 1.8
 
       # Runs a set of commands using the runners shell
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      
       - name: Run Tests
-        run: ./gardlew test
+        run: ./gradlew test
         
-      - name: Build Proyect
-        run: ./gardlew assemble
+      - name: Build Project
+        run: ./gradlew assemble

@@ -28,9 +28,9 @@ jobs:
         run: chmod +x Practica1/gradlew
       
       - name: Run Tests
-        run: Practica1/gradlew test
+        run: ./gradlew test
         working-directory: ./Practica1
         
       - name: Build Project
-        run: Practica1/gradlew assembl
+        run: ./gradlew assembl
         working-directory: ./Practica1

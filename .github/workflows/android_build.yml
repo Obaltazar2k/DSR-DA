@@ -22,13 +22,15 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-          
-      - name: Make gradlew executable
-        run: chmod +x .Practica1/gradlew
 
       # Runs a set of commands using the runners shell
+      - name: Make gradlew executable
+        run: chmod +x Practica1/gradlew
+      
       - name: Run Tests
-        run: .Practica1/gardlew test
+        run: ./gradlew test
+        working-directory: ./Practica1
         
-      - name: Build Proyect
-        run: .Practica1/gardlew assemble
+      - name: Build Project
+        run: ./gradlew assembl
+        working-directory: ./Practica1

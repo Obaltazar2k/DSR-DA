@@ -29,6 +29,8 @@ jobs:
       
       - name: Run Tests
         run: Practica1/gradlew test
+        working-directory: ./Practica1
         
       - name: Build Project
         run: Practica1/gradlew assembl
+        working-directory: ./Practica1

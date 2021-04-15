@@ -27,10 +27,20 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x Practica1/gradlew
       
-      - name: Run Tests
+      - name: Run-Lint
         run: ./gradlew test
         working-directory: ./Practica1
         
-      - name: Build Project
-        run: ./gradlew assembl
-        working-directory: ./Practica1
+      - name: Upload html test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: lint_html_report
+          path: app/build/reports/lint-results-debug.html
+      
+      #- name: Run Tests
+        #run: ./gradlew test
+        #working-directory: ./Practica1
+        
+      #- name: Build Project
+        #run: ./gradlew assembl
+        #working-directory: ./Practica1

@@ -28,7 +28,7 @@ jobs:
         run: chmod +x Practica1/gradlew
       
       - name: Run-Lint
-        run: ./gradlew test
+        run: ./gradlew lint
         working-directory: ./Practica1
         
       - name: Upload html test report

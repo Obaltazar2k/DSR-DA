@@ -46,7 +46,7 @@ jobs:
 
       # Permite ejecutar ./gradlew
       - name: Make gradlew executable
-        run: chmod +x ./gradlew
+        run: chmod +x Practica1/gradlew
 
       - name: Run tests
         run: ./gradlew test

@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val weekDays = arrayOf("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo")
+        
 
         val miLista = findViewById<ListView>(R.id.listaItems)
         

@@ -13,10 +13,8 @@ class MainActivity : AppCompatActivity() {
         val miTexto = findViewById<TextView>(R.id.txtTitulo)
 
         miTexto.text = "¡Hola mundo!"
-
-
         val weekDays = arrayOf("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo")
-        
+
 
         val miLista = findViewById<ListView>(R.id.listaItems)
         

@@ -1,4 +1,4 @@
-package com.stardust.practica1
+package com.stardust.calculadora
 
 import org.junit.Test
 

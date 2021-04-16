@@ -134,11 +134,11 @@ class MainActivity : AppCompatActivity() {
                 if (numDetras != null) {
                     when (operador) {
                         "+" -> {
-                            numDetras = numDetras!! +numero
+                            numDetras = sumar(numDetras!!, numero)
                             txtNumeros.setText("$numDetras")
                         }
                         "-" -> {
-                            numDetras = numDetras!! -numero
+                            numDetras = restar(numDetras!!, numero)
                             txtNumeros.setText("$numDetras")
                         }
                         "X" -> {
@@ -155,5 +155,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    public fun sumar(n1: Int?, n2: Int): Int? {
+        return n1?.plus(n2)
+    }
+
+    public fun restar(n1: Int?, n2: Int): Int? {
+        return n1?.minus(n2)
     }
 }

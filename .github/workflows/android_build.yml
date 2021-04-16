@@ -1,41 +1,37 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Andoird Build
 
-# Controls when the action will run. 
-on: pull_request
+on: 
+  push:
+      branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v1
+      - name: Checkout the code  
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Set Up JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
+      #- name: Set Up JDK
+      #  uses: actions/setup-java@v1
+      #  with:
+      #    java-version: 1.8
 
-      # Runs a set of commands using the runners shell
+      # Permite ejecutar ./gradlew
       - name: Make gradlew executable
         run: chmod +x Practica1/gradlew
       
       - name: Run-Lint
-        run: ./gradlew lint
+        run: ./gradlew lintDebug
         working-directory: ./Practica1
         
       - name: Upload html test report
         uses: actions/upload-artifact@v2
         with:
           name: lint_html_report
-          path: Practica1/app/build/reports/lint-results.html
+          path: Practica1/app/build/reports/lint-results-debug.html
           
   unit-test:
     needs: [build]
@@ -57,6 +53,30 @@ jobs:
         with:
           name: unit_test_report
           path: Practica1/app/build/reports/tests/testDebugUnitTest/
+          
+  instrumentation-test:
+    needs: [unit-test]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      # Permite ejecutar ./gradlew
+      - name: Make gradlew executable
+        run: chmod +x Practica1/gradlew
+
+      - name: Run espresso tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: ./gradlew connectedCheck          
+          working-directory: ./Practica1
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: instrumentation_test_report
+          path: Practica1/app/build/reports/androidTests/connected/
       
       #- name: Run Tests
         #run: ./gradlew test

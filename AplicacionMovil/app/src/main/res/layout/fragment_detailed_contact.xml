@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <Space
+        android:id="@+id/spaceArriba"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemContactPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical"
+        android:text="Telefono"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/itemContactEmail"
+        app:layout_constraintEnd_toEndOf="@id/itemContactWork"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/itemContactWork" />
+
+    <TextView
+        android:id="@+id/itemContactEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical"
+        android:text="Correo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/spaceAbajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/itemContactPhone" />
+
+    <TextView
+        android:id="@+id/itemContactWork"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical"
+        android:text="Trabajo"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/itemContactPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemContactName" />
+
+    <TextView
+        android:id="@+id/itemContactName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical"
+        android:text="Nombre"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/itemContactWork"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemContactPhoto" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemContactPhone"
+        app:layout_constraintEnd_toStartOf="@+id/itemContactPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemContactPhone"
+        app:srcCompat="@drawable/ic_button_call" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemContactEmail"
+        app:layout_constraintEnd_toStartOf="@+id/itemContactEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemContactPhone"
+        app:srcCompat="@drawable/ic_button_email" />
+
+    <ImageView
+        android:id="@+id/itemContactPhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/itemContactName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceArriba"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Space
+        android:id="@+id/spaceAbajo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemContactPhone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

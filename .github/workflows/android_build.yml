@@ -21,17 +21,17 @@ jobs:
 
       # Permite ejecutar ./gradlew
       - name: Make gradlew executable
-        run: chmod +x Practica1/gradlew
+        run: chmod +x AplicacionMovil/gradlew
       
       - name: Run-Lint
         run: ./gradlew lintDebug
-        working-directory: ./Practica1
+        working-directory: ./AplicacionMovil
         
       - name: Upload html test report
         uses: actions/upload-artifact@v2
         with:
           name: lint_html_report
-          path: Practica1/app/build/reports/lint-results-debug.html
+          path: AplicacionMovil/app/build/reports/lint-results-debug.html
           
   unit-test:
     needs: [build]
@@ -42,17 +42,17 @@ jobs:
 
       # Permite ejecutar ./gradlew
       - name: Make gradlew executable
-        run: chmod +x Practica1/gradlew
+        run: chmod +x AplicacionMovil/gradlew
 
       - name: Run tests
         run: ./gradlew test
-        working-directory: ./Practica1
+        working-directory: ./AplicacionMovil
 
       - name: Upload test report
         uses: actions/upload-artifact@v2
         with:
           name: unit_test_report
-          path: Practica1/app/build/reports/tests/testDebugUnitTest/
+          path: AplicacionMovil/app/build/reports/tests/testDebugUnitTest/
           
   instrumentation-test:
     needs: [unit-test]
@@ -63,28 +63,28 @@ jobs:
 
       # Permite ejecutar ./gradlew
       - name: Make gradlew executable
-        run: chmod +x Practica1/gradlew
+        run: chmod +x AplicacionMovil/gradlew
 
       - name: Run espresso tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
           script: ./gradlew connectedCheck          
-          working-directory: ./Practica1
+          working-directory: ./AplicacionMovil
 
       - name: Upload test report
         uses: actions/upload-artifact@v2
         with:
           name: instrumentation_test_report
-          path: Practica1/app/build/reports/androidTests/connected/
+          path: AplicacionMovil/app/build/reports/androidTests/connected/
       
       #- name: Run Tests
         #run: ./gradlew test
-        #working-directory: ./Practica1
+        #working-directory: ./AplicacionMovil
         
       #- name: Build Project
         #run: ./gradlew assembl
-        #working-directory: ./Practica1
+        #working-directory: ./AplicacionMovil
         
   package:
     needs: [instrumentation-test]
@@ -96,7 +96,7 @@ jobs:
 
       # Permite ejecutar ./gradlew
       - name: Make gradlew executable
-        run: chmod +x Practica1/gradlew
+        run: chmod +x AplicacionMovil/gradlew
 
       - name: set up JDK 1.8
         uses: actions/setup-java@v1
@@ -105,10 +105,10 @@ jobs:
 
       - name: Build debug APK
         run: ./gradlew assembleDebug          
-        working-directory: ./Practica1
+        working-directory: ./AplicacionMovil
 
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
           name: expense-manager.apk
-          path: Practica1/app/build/outputs/apk/debug/app-debug.apk
+          path: AplicacionMovil/app/build/outputs/apk/debug/app-debug.apk

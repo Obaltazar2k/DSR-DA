@@ -1,23 +1,24 @@
 package com.stardust.proyectokotlin.fragments
 
 import android.os.Bundle
-import android.provider.ContactsContract
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.isAnEmail
 import com.stardust.proyectokotlin.model.ConnectionManager
+
 
 class LoginFragment : Fragment() {
     private lateinit var txtEmail: EditText
     private lateinit var txtPassword: EditText
     private lateinit var bttnAdd: Button
+    private lateinit var bttnRegister: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,9 +32,15 @@ class LoginFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        val fm: FragmentManager = activity!!.supportFragmentManager
+        for (i in 0 until fm.getBackStackEntryCount()) {
+            fm.popBackStack()
+        }
+
         txtEmail = view!!.findViewById(R.id.editTextEmail)
         txtPassword = view!!.findViewById(R.id.editTextPassword)
         bttnAdd = view!!.findViewById(R.id.buttonLogin)
+        bttnRegister = view!!.findViewById(R.id.buttonSignup)
 
         bttnAdd?.setOnClickListener() {
             val email = txtEmail?.text.toString()
@@ -57,6 +64,17 @@ class LoginFragment : Fragment() {
             } else {
                 Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        bttnRegister?.setOnClickListener() {
+            val userGeneralFragment = UserGeneralFragment()
+            userGeneralFragment.arguments = requireActivity().intent.extras
+
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.add(R.id.mainFrame, userGeneralFragment)
+            transaction.addToBackStack(null)
+            transaction.addToBackStack(null).hide(this)
+            transaction.commit()
         }
     }
 }

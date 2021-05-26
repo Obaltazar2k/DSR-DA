@@ -10,8 +10,12 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import com.stardust.proyectokotlin.R
+import com.stardust.proyectokotlin.model.ConnectionManager
+import com.stardust.proyectokotlin.model.IndependientUser
+import com.stardust.proyectokotlin.model.User
 
-class IndependientSignupFragment : Fragment() {
+class IndependientSignupFragment(private val user: User) : Fragment() {
+
     private lateinit var bttnRegisterIndependient: Button
     private lateinit var txtName: EditText
     private lateinit var txtSurname: EditText
@@ -43,18 +47,27 @@ class IndependientSignupFragment : Fragment() {
             val ocupation = txtOcupation?.text.toString()
             val personalDescription = txtPersonalDescription?.text.toString()
 
-            if (name.isNotEmpty() &&
-                surname.isNotEmpty() &&
-                ocupation.isNotEmpty() &&
-                personalDescription.isNotEmpty()) {
+            if (name.isNotEmpty() && surname.isNotEmpty() && ocupation.isNotEmpty() && personalDescription.isNotEmpty()) {
+                var independientUser = IndependientUser()
+                independientUser.name = name
+                independientUser.surnames = surname
+                independientUser.ocupation = ocupation
+                independientUser.persoanlDescription = personalDescription
+                independientUser.user = user
 
-                val loginFragment = LoginFragment()
-                loginFragment.arguments = requireActivity().intent.extras
+                ConnectionManager.RegisterIndependientUser(independientUser, success = {
+                    Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
 
-                val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                transaction.add(R.id.mainFrame, loginFragment)
-                //transaction.addToBackStack(null)
-                transaction.commit()
+                    val loginFragment = LoginFragment()
+                    loginFragment.arguments = requireActivity().intent.extras
+
+                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                    transaction.add(R.id.mainFrame, loginFragment)
+                    //transaction.addToBackStack(null)
+                    transaction.commit()
+                }, fail = {
+                    Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+                })
 
             } else {
                 Toast.makeText(

@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.stardust.proyectokotlin.R
-import com.stardust.proyectokotlin.isAnEmail
+//import com.stardust.proyectokotlin.isAnEmail
 import com.stardust.proyectokotlin.model.ConnectionManager
 
 
@@ -45,9 +45,10 @@ class LoginFragment : Fragment() {
         bttnAdd?.setOnClickListener() {
             val email = txtEmail?.text.toString()
             val password = txtPassword?.text.toString()
-            if (email.isAnEmail()) {
+            //if (email.isAnEmail()) {
                 if (password.isNotEmpty()) {
                     ConnectionManager.loadLogin(email, password, success = {
+                        /*
                         val contactListFragment = ContactListFragment()
                         contactListFragment.arguments = requireActivity().intent.extras
 
@@ -55,15 +56,16 @@ class LoginFragment : Fragment() {
                         transaction.add(R.id.mainFrame, contactListFragment)
                         //transaction.addToBackStack(null)
                         transaction.commit()
+                         */
                     }, fail = {
                         Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
                     })
                 } else {
                     Toast.makeText(requireActivity(), "Introduce una contraseña", Toast.LENGTH_SHORT).show()
                 }
-            } else {
-                Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
-            }
+            //} else {
+                //Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
+            //}
         }
 
         bttnRegister?.setOnClickListener() {

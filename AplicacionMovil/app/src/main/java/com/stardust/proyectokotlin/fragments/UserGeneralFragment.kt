@@ -11,6 +11,7 @@ import android.widget.ImageButton
 import android.widget.Toast
 import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.isAnEmail
+import com.stardust.proyectokotlin.model.User
 
 class UserGeneralFragment : Fragment() {
     private lateinit var txtEmail: EditText
@@ -45,7 +46,13 @@ class UserGeneralFragment : Fragment() {
             if (email.isAnEmail()) {
                 if (password.isNotEmpty()) {
                     if (city.isNotEmpty() && country.isNotEmpty()) {
-                        val signupFragment = SignupFragment()
+                        val user = User()
+                        user.email = email
+                        user.password = password
+                        user.city = city
+                        user.country = country
+
+                        val signupFragment = SignupFragment(user)
                         signupFragment.arguments = requireActivity().intent.extras
 
                         val transaction = requireActivity().supportFragmentManager.beginTransaction()

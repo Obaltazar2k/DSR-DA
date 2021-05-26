@@ -9,8 +9,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import com.stardust.proyectokotlin.R
+import com.stardust.proyectokotlin.model.User
 
-class SignupFragment : Fragment() {
+class SignupFragment(private val user: User) : Fragment() {
+
     private lateinit var bttnRegisterOrganization: Button
     private lateinit var bttnRegisterIndependient: Button
     private lateinit var bttnBack: ImageButton
@@ -31,7 +33,7 @@ class SignupFragment : Fragment() {
         bttnBack = view!!.findViewById(R.id.imageButtonSignup)
 
         bttnRegisterOrganization?.setOnClickListener() {
-            val organizationSignupFragment = OrganizationSignupFragment()
+            val organizationSignupFragment = OrganizationSignupFragment(user)
             organizationSignupFragment.arguments = requireActivity().intent.extras
 
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -43,7 +45,7 @@ class SignupFragment : Fragment() {
         }
 
         bttnRegisterIndependient?.setOnClickListener() {
-            val independientSignupFragment = IndependientSignupFragment()
+            val independientSignupFragment = IndependientSignupFragment(user)
             independientSignupFragment.arguments = requireActivity().intent.extras
 
             val transaction = requireActivity().supportFragmentManager.beginTransaction()

@@ -7,9 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.stardust.proyectokotlin.R
-import com.stardust.proyectokotlin.isAnEmail
+//import com.stardust.proyectokotlin.isAnEmail
+import com.stardust.proyectokotlin.model.ConnectionManager
+import com.stardust.proyectokotlin.model.OrganizationUser
+import com.stardust.proyectokotlin.model.User
 
-class OrganizationSignupFragment : Fragment() {
+class OrganizationSignupFragment(private val user: User) : Fragment() {
+
     private lateinit var spinnerWorkSector: Spinner
     private lateinit var bttnRegisterOrganization: Button
     private lateinit var txtOrganizationName: EditText
@@ -78,22 +82,33 @@ class OrganizationSignupFragment : Fragment() {
             val organizationName = txtOrganizationName?.text.toString()
             val webSite = txtWebSite?.text.toString()
             val zipCode = txtZipCode?.text.toString()
-            if (contactEmail.isAnEmail()) {
-                if (about.isNotEmpty() &&
-                    contactName.isNotEmpty() &&
-                    contactPhone.isNotEmpty() &&
-                    organizationName.isNotEmpty() &&
-                    webSite.isNotEmpty() &&
-                    zipCode.isNotEmpty()
-                ) {
+            val workSector = spinnerWorkSector?.selectedItem.toString()
+            //if (contactEmail.isAnEmail()) {
+                if (about.isNotEmpty() && contactName.isNotEmpty() && contactPhone.isNotEmpty() && organizationName.isNotEmpty() && webSite.isNotEmpty() && zipCode.isNotEmpty()) {
+                    var organizationUser = OrganizationUser()
+                    organizationUser.about = about
+                    organizationUser.contactEmail = contactEmail
+                    organizationUser.contactName = contactName
+                    organizationUser.contactPhone = contactPhone
+                    organizationUser.name = organizationName
+                    organizationUser.webSite = webSite
+                    organizationUser.zipCode = zipCode.toInt()
+                    organizationUser.workSector = workSector.toUpperCase()
+                    organizationUser.user = user
 
-                    val loginFragment = LoginFragment()
-                    loginFragment.arguments = requireActivity().intent.extras
+                    ConnectionManager.RegisterOrganizationUser(organizationUser, success = {
+                        Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+                        
+                        val loginFragment = LoginFragment()
+                        loginFragment.arguments = requireActivity().intent.extras
 
-                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                    transaction.add(R.id.mainFrame, loginFragment)
-                    //transaction.addToBackStack(null)
-                    transaction.commit()
+                        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                        transaction.add(R.id.mainFrame, loginFragment)
+                        //transaction.addToBackStack(null)
+                        transaction.commit()
+                    }, fail = {
+                        Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+                    })
 
                 } else {
                     Toast.makeText(
@@ -102,10 +117,9 @@ class OrganizationSignupFragment : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            } else {
-                Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT)
-                    .show()
-            }
+            //} else {
+                //Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
+            //}
         }
 
         bttnBack?.setOnClickListener() {

@@ -10,8 +10,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.stardust.proyectokotlin.R
-//import com.stardust.proyectokotlin.isAnEmail
+import com.stardust.proyectokotlin.Token
+import com.stardust.proyectokotlin.isAnEmail
 import com.stardust.proyectokotlin.model.ConnectionManager
+import com.stardust.proyectokotlin.services.GeneralUserConnectionManager
 
 
 class LoginFragment : Fragment() {
@@ -45,27 +47,25 @@ class LoginFragment : Fragment() {
         bttnAdd?.setOnClickListener() {
             val email = txtEmail?.text.toString()
             val password = txtPassword?.text.toString()
-            //if (email.isAnEmail()) {
+            if (email.isAnEmail()) {
                 if (password.isNotEmpty()) {
-                    ConnectionManager.loadLogin(email, password, success = {
-                        /*
-                        val contactListFragment = ContactListFragment()
-                        contactListFragment.arguments = requireActivity().intent.extras
+                    GeneralUserConnectionManager.loadLogin(email, password, success = {
+                        val jobOfferListFragment = JobOfferListFragment()
+                        jobOfferListFragment.arguments = requireActivity().intent.extras
 
                         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                        transaction.add(R.id.mainFrame, contactListFragment)
+                        transaction.replace(R.id.mainFrame, jobOfferListFragment)
                         //transaction.addToBackStack(null)
                         transaction.commit()
-                         */
                     }, fail = {
                         Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
                     })
                 } else {
                     Toast.makeText(requireActivity(), "Introduce una contraseña", Toast.LENGTH_SHORT).show()
                 }
-            //} else {
-                //Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
-            //}
+            } else {
+                Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
+            }
         }
 
         bttnRegister?.setOnClickListener() {

@@ -1,11 +1,9 @@
 package com.stardust.proyectokotlin.fragments
 
 import android.os.Bundle
-import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -14,7 +12,7 @@ import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.model.Contact
 
 
-class DetailedContactFragment : Fragment() {
+class DetailedJobOfferFragment : Fragment() {
     private lateinit var imageView: ImageView
     private lateinit var txtName: TextView
     private lateinit var txtWork: TextView
@@ -33,10 +31,10 @@ class DetailedContactFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        txtName = view!!.findViewById(R.id.itemContactName)
-        txtWork = view!!.findViewById(R.id.itemContactWork)
-        txtEmail = view!!.findViewById(R.id.itemContactEmail)
-        txtPhone = view!!.findViewById(R.id.itemContactPhone)
+        txtName = view!!.findViewById(R.id.itemJobOfferJob)
+        txtWork = view!!.findViewById(R.id.itemJobOfferJobCategory)
+        txtEmail = view!!.findViewById(R.id.itemJobOfferDescription)
+        txtPhone = view!!.findViewById(R.id.itemJobOfferLocation)
         imageView = view!!.findViewById(R.id.itemContactPhoto)
 
         val bundle = arguments

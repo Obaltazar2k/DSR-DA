@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.stardust.proyectokotlin.R
-//import com.stardust.proyectokotlin.isAnEmail
+import com.stardust.proyectokotlin.isAnEmail
 import com.stardust.proyectokotlin.model.ConnectionManager
 import com.stardust.proyectokotlin.model.OrganizationUser
 import com.stardust.proyectokotlin.model.User
@@ -83,7 +83,7 @@ class OrganizationSignupFragment(private val user: User) : Fragment() {
             val webSite = txtWebSite?.text.toString()
             val zipCode = txtZipCode?.text.toString()
             val workSector = spinnerWorkSector?.selectedItem.toString()
-            //if (contactEmail.isAnEmail()) {
+            if (contactEmail.isAnEmail()) {
                 if (about.isNotEmpty() && contactName.isNotEmpty() && contactPhone.isNotEmpty() && organizationName.isNotEmpty() && webSite.isNotEmpty() && zipCode.isNotEmpty()) {
                     var organizationUser = OrganizationUser()
                     organizationUser.about = about
@@ -96,7 +96,7 @@ class OrganizationSignupFragment(private val user: User) : Fragment() {
                     organizationUser.workSector = workSector.toUpperCase()
                     organizationUser.user = user
 
-                    ConnectionManager.RegisterOrganizationUser(organizationUser, success = {
+                    ConnectionManager.registerOrganizationUser(organizationUser, success = {
                         Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
                         
                         val loginFragment = LoginFragment()
@@ -117,9 +117,9 @@ class OrganizationSignupFragment(private val user: User) : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            //} else {
-                //Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
-            //}
+            } else {
+                Toast.makeText(requireActivity(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
+            }
         }
 
         bttnBack?.setOnClickListener() {

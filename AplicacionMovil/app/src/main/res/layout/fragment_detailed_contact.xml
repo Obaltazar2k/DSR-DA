@@ -15,20 +15,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/itemContactPhone"
+        android:id="@+id/itemJobOfferLocation"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
         android:gravity="center_vertical"
         android:text="Telefono"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/itemContactEmail"
-        app:layout_constraintEnd_toEndOf="@id/itemContactWork"
+        app:layout_constraintBottom_toTopOf="@+id/itemJobOfferDescription"
+        app:layout_constraintEnd_toEndOf="@id/itemJobOfferJobCategory"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/itemContactWork" />
+        app:layout_constraintTop_toBottomOf="@+id/itemJobOfferJobCategory" />
 
     <TextView
-        android:id="@+id/itemContactEmail"
+        android:id="@+id/itemJobOfferDescription"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
@@ -38,31 +38,31 @@
         app:layout_constraintBottom_toTopOf="@id/spaceAbajo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/itemContactPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/itemJobOfferLocation" />
 
     <TextView
-        android:id="@+id/itemContactWork"
+        android:id="@+id/itemJobOfferJobCategory"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
         android:gravity="center_vertical"
         android:text="Trabajo"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/itemContactPhone"
+        app:layout_constraintBottom_toTopOf="@+id/itemJobOfferLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemContactName" />
+        app:layout_constraintTop_toBottomOf="@+id/itemJobOfferJob" />
 
     <TextView
-        android:id="@+id/itemContactName"
+        android:id="@+id/itemJobOfferJob"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
         android:gravity="center_vertical"
         android:text="Nombre"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/itemContactWork"
+        app:layout_constraintBottom_toTopOf="@+id/itemJobOfferJobCategory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,10 +73,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/itemContactPhone"
-        app:layout_constraintEnd_toStartOf="@+id/itemContactPhone"
+        app:layout_constraintBottom_toBottomOf="@+id/itemJobOfferLocation"
+        app:layout_constraintEnd_toStartOf="@+id/itemJobOfferLocation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/itemContactPhone"
+        app:layout_constraintTop_toTopOf="@+id/itemJobOfferLocation"
         app:srcCompat="@drawable/ic_button_call" />
 
     <ImageView
@@ -84,10 +84,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/itemContactEmail"
-        app:layout_constraintEnd_toStartOf="@+id/itemContactEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/itemJobOfferDescription"
+        app:layout_constraintEnd_toStartOf="@+id/itemJobOfferDescription"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemContactPhone"
+        app:layout_constraintTop_toBottomOf="@+id/itemJobOfferLocation"
         app:srcCompat="@drawable/ic_button_email" />
 
     <ImageView
@@ -96,7 +96,7 @@
         android:layout_height="200dp"
         android:layout_margin="8dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/itemContactName"
+        app:layout_constraintBottom_toTopOf="@+id/itemJobOfferJob"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spaceArriba"
@@ -109,6 +109,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemContactPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/itemJobOfferLocation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

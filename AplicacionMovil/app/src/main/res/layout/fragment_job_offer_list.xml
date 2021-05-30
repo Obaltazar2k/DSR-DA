@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ContactListFragment" >
+    tools:context=".fragments.JobOfferListFragment" >
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/contactsRecyclerView"
+        android:id="@+id/jobOffersRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/item_contact" />
+        tools:listitem="@layout/item_job_offer" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -37,10 +37,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/ic_button_call"
+                android:drawableTop="@drawable/ic_menu_mine"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:text="shar"
                 android:textAllCaps="false"></TextView>
 
             <TextView
@@ -49,10 +48,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/ic_button_email"
+                android:drawableTop="@android:drawable/ic_menu_info_details"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:text="stats"
                 android:textAllCaps="false"></TextView>
 
             <TextView
@@ -64,7 +62,8 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:visibility="invisible"></TextView>
+                android:visibility="visible"
+                tools:visibility="visible"></TextView>
 
             <TextView
                 android:id="@+id/wall_blur"
@@ -72,21 +71,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/ic_button_call"
+                android:drawableTop="@android:drawable/ic_menu_compass"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:text="blur"
                 android:textAllCaps="false"></TextView>
 
             <TextView
+                android:id="@+id/logoutButton"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/ic_button_call"
+                android:drawableTop="@android:drawable/ic_menu_set_as"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:text="filters_title"
                 android:textAllCaps="false"></TextView>
 
         </LinearLayout>
@@ -95,12 +93,12 @@
         <!-- app:navigationIcon="@drawable/ic_menu_mine" -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonAddJobOffer"
+        android:id="@+id/buttonUploadJobOffer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="Add job offer"
         android:foregroundTintMode="src_in"
         app:layout_anchor="@id/bottomAppBar"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_menu_upload" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

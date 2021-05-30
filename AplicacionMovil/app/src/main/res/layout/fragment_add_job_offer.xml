@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".fragments.AddContactFragment">
+    tools:context=".fragments.AddJobOfferFragment">
 
     <Space
         android:id="@+id/spaceTop"
@@ -16,90 +16,70 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/editTextJob"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextWork"
+        android:hint="Job"
+        app:layout_constraintBottom_toTopOf="@+id/editTextJobCategory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spaceTop" />
 
     <EditText
-        android:id="@+id/editTextWork"
+        android:id="@+id/editTextJobCategory"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Trabajo"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCorreo"
+        android:hint="Job category"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextJob" />
 
     <EditText
-        android:id="@+id/editTextCorreo"
+        android:id="@+id/editTextLocation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Correo"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        android:hint="Location"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextWork" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextJobCategory" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/editTextDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="Telefono"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhoto"
+        android:hint="Description"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUploadJobOffer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCorreo" />
-
-    <EditText
-        android:id="@+id/editTextPhoto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Foto"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAddContact"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocation" />
 
     <Button
-        android:id="@+id/buttonAddContact"
+        android:id="@+id/buttonUploadJobOffer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Agregar contacto"
         app:layout_constraintBottom_toTopOf="@+id/space3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhoto" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
 
     <Space
         android:id="@+id/space3"
@@ -109,7 +89,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAddContact"
-        app:layout_constraintVertical_bias="0.933" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonUploadJobOffer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,7 +55,7 @@ class IndependientSignupFragment(private val user: User) : Fragment() {
                 independientUser.persoanlDescription = personalDescription
                 independientUser.user = user
 
-                ConnectionManager.RegisterIndependientUser(independientUser, success = {
+                ConnectionManager.registerIndependientUser(independientUser, success = {
                     Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
 
                     val loginFragment = LoginFragment()

@@ -21,6 +21,9 @@ class JobOffer : Serializable {
     @SerializedName("jobOfferId")
     var jobOfferId: Int? = 0
     @Expose
-    @SerializedName("media")
-    var media: List<Media>? = null
+    @SerializedName("username")
+    var username: String? = "username"
+    //@Expose
+    //@SerializedName("media")
+    //var media: List<Media>? = null
 }

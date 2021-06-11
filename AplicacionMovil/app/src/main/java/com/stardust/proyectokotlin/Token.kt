@@ -1,5 +1,8 @@
 package com.stardust.proyectokotlin
 
 object Token {
-     var token: String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYyMjQwMTUxMiwianRpIjoiYTc1ZGJlZTgtNzNmMS00NDM3LTg4OTYtZjUyYTU4ODZiZmJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImRlbW9AdXYubXgiLCJuYmYiOjE2MjI0MDE1MTIsImV4cCI6MTYyMjQ4NzkxMn0.secoASuNEPhOcn0GvU8_9Q1cECCWed-lRE24FTO04CU"
+     lateinit var token: String
+     lateinit var username: String
+     lateinit var password: String
+     lateinit var kindOf: String
 }

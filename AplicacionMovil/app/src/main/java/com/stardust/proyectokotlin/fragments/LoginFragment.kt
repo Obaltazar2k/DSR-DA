@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.Token
+import com.stardust.proyectokotlin.Token.password
+import com.stardust.proyectokotlin.Token.token
+import com.stardust.proyectokotlin.Token.username
 import com.stardust.proyectokotlin.isAnEmail
 import com.stardust.proyectokotlin.model.ConnectionManager
 import com.stardust.proyectokotlin.services.GeneralUserConnectionManager
@@ -50,11 +53,14 @@ class LoginFragment : Fragment() {
             if (email.isAnEmail()) {
                 if (password.isNotEmpty()) {
                     GeneralUserConnectionManager.loadLogin(email, password, success = {
-                        val jobOfferListFragment = JobOfferListFragment()
-                        jobOfferListFragment.arguments = requireActivity().intent.extras
+                        Token.token = it
+                        Token.username = email
+                        Token.password = password
+                        val homeFragment = HomeFragment()
+                        homeFragment.arguments = requireActivity().intent.extras
 
                         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                        transaction.replace(R.id.mainFrame, jobOfferListFragment)
+                        transaction.replace(R.id.mainFrame, homeFragment)
                         //transaction.addToBackStack(null)
                         transaction.commit()
                     }, fail = {

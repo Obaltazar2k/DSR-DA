@@ -1,5 +1,6 @@
 package com.stardust.proyectokotlin.services
 
+import com.stardust.proyectokotlin.Token
 import com.stardust.proyectokotlin.model.RetrofitInstance
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -14,16 +15,17 @@ object GeneralUserConnectionManager {
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 fail("loadLogin onFailure")
             }
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) =
                 if (response.code() == 200) {
-                    success(response.body().toString())
+                    var members = response.body()!!.string().split("/")
+                    Token.kindOf = members[0]
+                    success(members[1])
                 }
                 else if (response.code() == 401) {
                     fail("Credenciales incorrectas")
                 } else {
                     fail("Error de autenticación")
                 }
-            }
         })
     }
 }

@@ -7,6 +7,37 @@
     android:background="#FFFFFF"
     tools:context=".fragments.AddJobOfferFragment">
 
+    <Spinner
+        android:id="@+id/spinnerJobCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/black"
+        android:foregroundTint="@color/black"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:popupBackground="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUploadJobOffer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Categoria de trabajo:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerJobCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
+
     <Space
         android:id="@+id/spaceTop"
         android:layout_width="match_parent"
@@ -23,25 +54,11 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Job"
-        app:layout_constraintBottom_toTopOf="@+id/editTextJobCategory"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spaceTop" />
-
-    <EditText
-        android:id="@+id/editTextJobCategory"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Job category"
         app:layout_constraintBottom_toTopOf="@+id/editTextLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextJob" />
+        app:layout_constraintTop_toBottomOf="@id/spaceTop" />
 
     <EditText
         android:id="@+id/editTextLocation"
@@ -49,13 +66,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Location"
         app:layout_constraintBottom_toTopOf="@+id/editTextDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextJobCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextJob" />
 
     <EditText
         android:id="@+id/editTextDescription"
@@ -66,7 +84,7 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Description"
-        app:layout_constraintBottom_toTopOf="@+id/buttonUploadJobOffer"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLocation" />
@@ -75,11 +93,12 @@
         android:id="@+id/buttonUploadJobOffer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agregar contacto"
+        android:text="Agregar oferta"
         app:layout_constraintBottom_toTopOf="@+id/space3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerJobCategory" />
 
     <Space
         android:id="@+id/space3"

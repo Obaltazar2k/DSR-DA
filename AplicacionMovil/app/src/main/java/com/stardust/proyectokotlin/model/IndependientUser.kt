@@ -1,26 +1,27 @@
 package com.stardust.proyectokotlin.model
 
 import com.google.gson.annotations.Expose
+import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
+import com.google.gson.internal.bind.ArrayTypeAdapter
 
 class IndependientUser {
-    @Expose
     @SerializedName("surnames")
     lateinit var surnames: String
     @SerializedName("name")
     lateinit var name: String
     @SerializedName("ocupation")
     lateinit var ocupation: String
-    @SerializedName("persoanlDescription")
+    @SerializedName("persoanl_description")
     lateinit var persoanlDescription: String
     @SerializedName("user")
     lateinit var user: User
+    @SerializedName("laboral_experience")
+    var laboral_experience: ArrayList<LaboralExperience>? = null
     @SerializedName("education")
-    lateinit var education: List<Education>
-    @SerializedName("laboralExperience")
-    lateinit var laboralExperience: List<LaboralExperience>
+    var education: ArrayList<Education>? = null
     @SerializedName("certification")
-    lateinit var certification: List<Certification>
+    var certification: ArrayList<Certification>? = null
     @SerializedName("section")
-    lateinit var section: List<Section>
+    var section: ArrayList<Section>? = null
 }

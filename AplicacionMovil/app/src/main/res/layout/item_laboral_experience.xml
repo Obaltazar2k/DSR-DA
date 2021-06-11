@@ -22,92 +22,92 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/itemJobOfferTitle"
-                android:layout_width="wrap_content"
+                android:id="@+id/itemLaboralExperienceDate"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:text="Job"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/itemJobOfferLocation"
-                app:layout_constraintEnd_toStartOf="@+id/itemJobOfferCategory"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/itemJobOfferCategory"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
-                android:gravity="center_vertical"
-                android:text="Job category"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/itemJobOfferLocation"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/itemJobOfferTitle"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/itemJobOfferLocation"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
-                android:gravity="center_vertical"
-                android:text="Location"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/itemJobOfferDescription"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/itemJobOfferName"
-                app:layout_constraintTop_toBottomOf="@+id/itemJobOfferCategory" />
-
-            <TextView
-                android:id="@+id/itemJobOfferDescription"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:text="Description"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toTopOf="@+id/itemJobOfferButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/itemJobOfferLocation" />
-
-            <TextView
-                android:id="@+id/itemJobOfferName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="Username"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/itemJobOfferDescription"
-                app:layout_constraintEnd_toStartOf="@+id/itemJobOfferLocation"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/itemJobOfferTitle" />
-
-            <Button
-                android:id="@+id/itemJobOfferButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/roboto"
-                android:text="Aplicar"
+                android:text="Fecha"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/itemJobOfferDescription" />
+                app:layout_constraintTop_toBottomOf="@+id/itemLaboralExperienceCategory" />
+
+            <TextView
+                android:id="@+id/itemLaboralExperienceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical"
+                android:text="Experiencia laboral"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/itemLaboralExperienceOrganization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center_vertical"
+                android:text="Empresa"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/itemLaboralExperienceSector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemLaboralExperienceName" />
+
+            <TextView
+                android:id="@+id/itemLaboralExperienceSector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical"
+                android:text="Sector"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemLaboralExperienceOrganization" />
+
+            <TextView
+                android:id="@+id/itemLaboralExperienceCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical"
+                android:text="Categoría"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemLaboralExperienceSector" />
+
+            <TextView
+                android:id="@+id/itemLaboralExperienceLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="Ubicación"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/itemLaboralExperienceCategory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemLaboralExperienceSector" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.stardust.proyectokotlin.services
 import com.stardust.proyectokotlin.model.IndependientUser
 import com.stardust.proyectokotlin.model.JobOffer
 import com.stardust.proyectokotlin.model.OrganizationUser
+import okhttp3.Response
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -42,11 +43,31 @@ interface Services {
         @Header("Authorization") authHeader: String?
     ): Call<ArrayList<JobOffer>>
 
+    @Headers("Content-Type:application/json")
+    @GET("users/{user_id}/job_offer")
+    fun requestJobOffersPublishedByTheUser(
+        @Path("user_id") user_id: String?,
+        @Header("Authorization") authHeader: String?
+    ): Call<ArrayList<JobOffer>>
+
     @POST("job_offers")
     fun addJobOffer(
         @Body jobOffer: JobOffer,
         @Header("Authorization") authHeader: String?
     ): Call<ResponseBody>
+
+    @POST("users/{user_id}/job_offers/{job_offer_id}/aplications")
+    fun addAplication(
+        @Path("user_id") user_id: String?,
+        @Path("job_offer_id") job_offer_id: Int?,
+        @Header("Authorization") authHeader: String?
+    ): Call<ResponseBody>
+
+    @GET("users/independient_user/{user_id}")
+    fun requestIndependientInfo(
+        @Path("user_id") user_id: String?,
+        @Header("Authorization") authHeader: String?
+    ): Call<IndependientUser>
 
 /*
     @GET("/2020/contacts/list.php")

@@ -31,8 +31,8 @@ class DetailedJobOfferFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        txtName = view!!.findViewById(R.id.itemJobOfferJob)
-        txtWork = view!!.findViewById(R.id.itemJobOfferJobCategory)
+        txtName = view!!.findViewById(R.id.itemJobOfferTitle)
+        txtWork = view!!.findViewById(R.id.itemJobOfferCategory)
         txtEmail = view!!.findViewById(R.id.itemJobOfferDescription)
         txtPhone = view!!.findViewById(R.id.itemJobOfferLocation)
         imageView = view!!.findViewById(R.id.itemContactPhoto)

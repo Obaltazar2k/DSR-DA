@@ -13,8 +13,6 @@ class Certification {
     lateinit var expiration_date: String
     @SerializedName("expedition_date")
     lateinit var expedition_date: String
-    @SerializedName("discipline")
-    lateinit var discipline: String
     @SerializedName("issuing_company")
     lateinit var issuing_company: String
     @SerializedName("credential_url")

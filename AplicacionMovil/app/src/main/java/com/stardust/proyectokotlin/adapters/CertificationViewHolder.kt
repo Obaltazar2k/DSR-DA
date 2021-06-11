@@ -14,7 +14,6 @@ class CertificationViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
     private val txtName: TextView = itemView.findViewById(R.id.itemCertificationTitle)
     //private val txtAvarage: TextView = itemView.findViewById(R.id.itemEducationAvarage)
     private val txtCompany: TextView = itemView.findViewById(R.id.itemCertificationCompany)
-    private val txtDiscipline: TextView = itemView.findViewById(R.id.itemCertificationDiscipline)
 
     fun bindData(certification: Certification, onSelected: (Certification) -> Unit){
         txtDate.text = certification.expedition_date + " - " + certification.expiration_date
@@ -22,7 +21,6 @@ class CertificationViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
         txtName.text = certification.title
         //txtAvarage.text = certification.average
         txtCompany.text = certification.issuing_company
-        txtDiscipline.text = certification.discipline
 
         /*
         if(!contact.photo.isNullOrEmpty())

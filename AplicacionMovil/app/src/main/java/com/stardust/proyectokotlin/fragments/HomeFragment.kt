@@ -11,7 +11,6 @@ import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.Token
-import com.stardust.proyectokotlin.services.IndependientUserConnectionManager
 
 class HomeFragment : Fragment() {
     private lateinit var bottomAppBar: BottomAppBar
@@ -51,24 +50,23 @@ class HomeFragment : Fragment() {
         bttnProfile = view!!.findViewById(R.id.profile_button)
         bttnProfile.setOnClickListener() {
             if (Token.kindOf.equals("IND")) {
-                val profileFragment = ProfileFragment()
-                profileFragment.arguments = requireActivity().intent.extras
+                val independientProfileFragment = IndependientProfileFragment()
+                independientProfileFragment.arguments = requireActivity().intent.extras
 
                 val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.fragmentContainerView, profileFragment)
+                transaction.replace(R.id.fragmentContainerView, independientProfileFragment)
                 fragment.removeAllViews()
                 transaction.addToBackStack(null)
                 transaction.commit()
             } else {
-                /*
-                val profileFragment = ProfileFragment(it)
-                profileFragment.arguments = requireActivity().intent.extras
+                val orgaizationProfileFragment = OrganizationProfileFragment()
+                orgaizationProfileFragment.arguments = requireActivity().intent.extras
 
                 val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.fragmentContainerView, profileFragment)
+                transaction.replace(R.id.fragmentContainerView, orgaizationProfileFragment)
                 fragment.removeAllViews()
                 transaction.addToBackStack(null)
-                 */
+                transaction.commit()
             }
 
 

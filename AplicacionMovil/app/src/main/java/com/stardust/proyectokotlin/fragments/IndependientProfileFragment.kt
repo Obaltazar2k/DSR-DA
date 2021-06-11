@@ -24,7 +24,7 @@ import com.stardust.proyectokotlin.model.Section
 import com.stardust.proyectokotlin.services.IndependientUserConnectionManager
 
 
-class ProfileFragment : Fragment() {
+class IndependientProfileFragment : Fragment() {
     //private lateinit var imageView: ImageView
     private lateinit var txtName: TextView
     private lateinit var txtWork: TextView
@@ -50,11 +50,17 @@ class ProfileFragment : Fragment() {
     private lateinit var certificatonAdapter: CertificationAdapter
     private lateinit var sectionAdapter: SectionAdapter
 
+    private lateinit var titleLaboralExperience: TextView
+    private lateinit var titleEducation: TextView
+    private lateinit var titleCertification: TextView
+    private lateinit var titleSection: TextView
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_independient_profile, container, false)
         laboralExperienceRecyclerView = view.findViewById(R.id.laboralExperienceRecyclerView)
         educationRecyclerView = view.findViewById(R.id.educationRecyclerView)
         certificationRecyclerView = view.findViewById(R.id.certificationRecyclerView)
@@ -65,6 +71,11 @@ class ProfileFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        titleLaboralExperience = view!!.findViewById(R.id.itemProfileLaboralExperience)
+        titleEducation = view!!.findViewById(R.id.itemProfileEducation)
+        titleCertification = view!!.findViewById(R.id.itemProfileCertification)
+        titleSection = view!!.findViewById(R.id.itemProfileSeccion)
 
         progressBar = view!!.findViewById(R.id.profileProgressBar)
         nestedScrollView = view!!.findViewById(R.id.nestedScrollView)
@@ -106,17 +117,33 @@ class ProfileFragment : Fragment() {
             txtWork.text = it.ocupation
             txtDescription.text = it.persoanlDescription
 
-            laboralExperiences.addAll(it.laboral_experience!!)
-            laboralExperienceAdapter.notifyDataSetChanged()
+            it.laboral_experience?.let {
+                laboralExperiences.addAll(it)
+                titleLaboralExperience.visibility = View.VISIBLE
+                laboralExperienceRecyclerView.visibility = View.VISIBLE
+                laboralExperienceAdapter.notifyDataSetChanged()
+            }
 
-            educations.addAll(it.education!!)
-            educationAdapter.notifyDataSetChanged()
+            it.education?.let {
+                educations.addAll(it)
+                titleEducation.visibility = View.VISIBLE
+                educationRecyclerView.visibility = View.VISIBLE
+                educationAdapter.notifyDataSetChanged()
+            }
 
-            it.certification?.let { it1 -> certifications.addAll(it1) }
-            certificatonAdapter.notifyDataSetChanged()
+            it.certification?.let {
+                certifications.addAll(it)
+                titleCertification.visibility = View.VISIBLE
+                certificationRecyclerView.visibility = View.VISIBLE
+                certificatonAdapter.notifyDataSetChanged()
+            }
 
-            it.section?.let { it1 -> sections.addAll(it1) }
-            sectionAdapter.notifyDataSetChanged()
+            it.section?.let {
+                sections.addAll(it)
+                titleSection.visibility = View.VISIBLE
+                sectionRecyclerView.visibility = View.VISIBLE
+                sectionAdapter.notifyDataSetChanged()
+            }
 
             nestedScrollView.visibility = View.VISIBLE
             progressBar.visibility = View.GONE
@@ -128,6 +155,7 @@ class ProfileFragment : Fragment() {
 
         }, fail = {
             Toast.makeText(requireActivity(), it, Toast.LENGTH_LONG).show()
+            progressBar.visibility = View.GONE
         })
 
 

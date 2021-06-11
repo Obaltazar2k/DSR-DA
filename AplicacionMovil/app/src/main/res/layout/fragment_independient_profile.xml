@@ -40,14 +40,30 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
                     android:id="@+id/educationRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5">
+                    app:layout_constraintTop_toBottomOf="@+id/itemProfileEducation">
 
                 </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/itemProfileGenetalInformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="8dp"
+                    android:text="Información general" />
 
                 <ImageView
                     android:id="@+id/itemContactPhoto"
@@ -58,16 +74,17 @@
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/itemProfileGenetalInformation"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
                     android:id="@+id/laboralExperienceRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/itemProfileLaboralExperience" />
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -84,7 +101,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:gravity="center_vertical"
                     android:text="Ubicación"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +118,8 @@
                     app:srcCompat="@drawable/ic_button_email" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:visibility="gone"
+                    android:id="@+id/itemProfileLaboralExperience"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -151,7 +168,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/itemContactPhoto" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:visibility="gone"
+                    android:id="@+id/itemProfileEducation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -189,7 +207,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/itemProfileLocation" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:visibility="gone"
+                    android:id="@+id/itemProfileCertification"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -201,15 +220,17 @@
                     app:layout_constraintTop_toBottomOf="@+id/educationRecyclerView" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
                     android:id="@+id/certificationRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                    app:layout_constraintTop_toBottomOf="@+id/itemProfileCertification" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:visibility="gone"
+                    android:id="@+id/itemProfileSeccion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -221,12 +242,13 @@
                     app:layout_constraintTop_toBottomOf="@+id/certificationRecyclerView" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
                     android:id="@+id/sectionRecylcerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    app:layout_constraintTop_toBottomOf="@+id/itemProfileSeccion" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

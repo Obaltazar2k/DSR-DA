@@ -54,6 +54,7 @@ class MyJobOfferListFragment : Fragment() {
             isLoading = false
         }, fail = {
             Toast.makeText(requireActivity(), it, Toast.LENGTH_LONG).show()
+            progressBar.visibility = View.GONE
         })
 /*
         layoutManager = LinearLayoutManager(this.requireContext())

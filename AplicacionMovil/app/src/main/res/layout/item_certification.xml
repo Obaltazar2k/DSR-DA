@@ -57,25 +57,9 @@
                 android:gravity="center_vertical"
                 android:text="Compañía"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/itemCertificationDiscipline"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/itemCertificationTitle" />
-
-            <TextView
-                android:id="@+id/itemCertificationDiscipline"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:text="Disciplina"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/itemCertificationCompany" />
-
 
             <TextView
                 android:id="@+id/itemCertificationUrl"
@@ -90,7 +74,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/itemCertificationDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/itemCertificationDiscipline" />
+                app:layout_constraintTop_toBottomOf="@+id/itemCertificationCompany" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

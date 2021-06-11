@@ -3,7 +3,6 @@ package com.stardust.proyectokotlin.services
 import com.stardust.proyectokotlin.model.IndependientUser
 import com.stardust.proyectokotlin.model.JobOffer
 import com.stardust.proyectokotlin.model.OrganizationUser
-import okhttp3.Response
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -68,6 +67,12 @@ interface Services {
         @Path("user_id") user_id: String?,
         @Header("Authorization") authHeader: String?
     ): Call<IndependientUser>
+
+    @GET("users/organization_user/{user_id}")
+    fun requestOrganizationInfo(
+        @Path("user_id") user_id: String?,
+        @Header("Authorization") authHeader: String?
+    ): Call<OrganizationUser>
 
 /*
     @GET("/2020/contacts/list.php")

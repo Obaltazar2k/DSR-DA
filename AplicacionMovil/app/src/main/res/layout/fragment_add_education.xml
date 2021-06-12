@@ -1,14 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddEducationFragment">
+    android:background="#FFFFFF"
+    tools:context=".fragments.AddEducationFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Educación"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/itemEducationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Titulo de la experiencia"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemEducationUniversity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Nombre de la universidad"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemEducationDiscipline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Disciplina"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemEducationAvarage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Promedio"
+        android:inputType="number"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemEducationDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Descripción"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/itemEducationStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Fecha inicio"
+            android:inputType="date"
+            android:focusable="false"
+            android:clickable="true"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/itemEducationEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Fecha fin"
+            android:inputType="date"
+            android:focusable="false"
+            android:clickable="true"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttonUploadEducation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar educación"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

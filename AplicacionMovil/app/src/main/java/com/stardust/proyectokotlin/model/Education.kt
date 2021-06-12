@@ -20,7 +20,7 @@ public class Education {
     @SerializedName("description")
     lateinit var description: String
     @SerializedName("average")
-    lateinit var average: Integer
+    var average: Int? = 0
     //@SerializedName("current_job")
     //var current_job: Boolean = false
 }

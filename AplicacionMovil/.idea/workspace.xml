@@ -32,27 +32,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12df9aa9-29be-41b8-bfb9-ab657611db83" name="Default Changelist" comment="Se agregaron las pantallas de registro">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddCertificationFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddEducationFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddLaboralExperienceFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddSectionFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/DatePickerFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/LaboralExperienceConnectionManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_certification.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_education.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_laboral_experience.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_section.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/popup_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/EducationConnectionManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddJobOfferFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddJobOfferFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/IndependientProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/IndependientProfileFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/LaboralExperience.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/LaboralExperience.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddEducationFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddEducationFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/Education.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/Education.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/Services.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/Services.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_independient_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_independient_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_education.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_education.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_laboral_experience.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_laboral_experience.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,15 +62,15 @@
         <option value="Class" />
         <option value="layoutResourceFile" />
         <option value="resourceFile" />
-        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="BR-ConsultOrganizationProfile" />
+        <entry key="$PROJECT_DIR$/.." value="BR-AddLaboralExperience" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -261,10 +251,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="274" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623424590715" />
-    <state x="540" y="274" key="AndroidCreateResourceFileDialog" timestamp="1623448202545">
+    <state x="540" y="274" key="AndroidCreateResourceFileDialog" timestamp="1623460016113">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="274" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623448202545" />
+    <state x="540" y="274" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623460016113" />
     <state x="804" y="305" key="AndroidCreateXmlResourceDialog" timestamp="1623447933501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -7,14 +7,6 @@ import retrofit2.http.*
 
 
 interface Services {
-    //@FormUrlEncoded
-    //@POST("/2020/contacts/login.php")
-    //fun login(
-    //    @Field("email") email: String?,
-    //    @Field("password") password: String?
-    //): Call<User>
-
-    //@Headers("Content-Type:application/json")
     @GET("users/login")
     fun login(
         @Query("username") username: String?,
@@ -86,12 +78,17 @@ interface Services {
         @Header("Authorization") authHeader: String?
     ): Call<ResponseBody>
 
-/*
-    @GET("/2020/contacts/list.php")
-    fun requestContacts(): Call<ArrayList<Contact>>
-*/
-/*
-    @POST("/2020/contacts/add_contact.php")
-    fun addContact(@Body contact: Contact): Call<Message>
-*/
+    @POST("users/independient_user/{user_id}/certification")
+    fun addCertification(
+        @Body certification: Certification,
+        @Path("user_id") user_id: String?,
+        @Header("Authorization") authHeader: String?
+    ): Call<ResponseBody>
+
+    @POST("users/independient_user/{user_id}/section")
+    fun addSection(
+        @Body section: Section,
+        @Path("user_id") user_id: String?,
+        @Header("Authorization") authHeader: String?
+    ): Call<ResponseBody>
 }

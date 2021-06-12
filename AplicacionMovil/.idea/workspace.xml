@@ -32,29 +32,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12df9aa9-29be-41b8-bfb9-ab657611db83" name="Default Changelist" comment="Se agregaron las pantallas de registro">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/OrganizationProfileFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/OrganizationUserConnectionManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_organization_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddCertificationFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddEducationFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddLaboralExperienceFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddSectionFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/DatePickerFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/LaboralExperienceConnectionManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_certification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_education.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_laboral_experience.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_section.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/popup_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/adapters/CertificationViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/adapters/CertificationViewHolder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/MyJobOfferListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/MyJobOfferListFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/ProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/IndependientProfileFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/Certification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/Certification.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddJobOfferFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddJobOfferFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/IndependientProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/IndependientProfileFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/LaboralExperience.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/LaboralExperience.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/Services.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/Services.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_independient_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_certification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_certification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_independient_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_independient_profile.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\ricar\.android\avd\Pixel_3a_API_30_x86.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@9RJ0220924000092]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -64,18 +69,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="resourceFile" />
         <option value="Class" />
-        <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
+        <option value="resourceFile" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="BR-PublishJobOffer" />
+        <entry key="$PROJECT_DIR$/.." value="BR-ConsultOrganizationProfile" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -232,10 +237,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" width="816" height="730" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1623353861417" />
-    <state x="403" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1623289092769">
+    <state x="403" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1623457157779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="403" y="254" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623289092769" />
+    <state x="403" y="254" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623457157779" />
     <state x="779" y="210" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1622042682355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -256,14 +261,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="274" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623424590715" />
-    <state x="540" y="274" key="AndroidCreateResourceFileDialog" timestamp="1623380007379">
+    <state x="540" y="274" key="AndroidCreateResourceFileDialog" timestamp="1623448202545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="274" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623380007379" />
-    <state x="804" y="305" key="AndroidCreateXmlResourceDialog" timestamp="1622745215423">
+    <state x="540" y="274" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623448202545" />
+    <state x="804" y="305" key="AndroidCreateXmlResourceDialog" timestamp="1623447933501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="804" y="305" key="AndroidCreateXmlResourceDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1622745215423" />
+    <state x="804" y="305" key="AndroidCreateXmlResourceDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623447933501" />
     <state x="752" y="266" key="AndroidProcessChooserDialog" timestamp="1623429488863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -280,22 +285,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621548561283" />
-    <state width="1877" height="235" key="GridCell.Tab.0.bottom" timestamp="1623430686952">
+    <state width="1877" height="235" key="GridCell.Tab.0.bottom" timestamp="1623458165778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623430686952" />
-    <state width="1877" height="235" key="GridCell.Tab.0.center" timestamp="1623430686952">
+    <state width="1877" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623458165778" />
+    <state width="1877" height="235" key="GridCell.Tab.0.center" timestamp="1623458165778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623430686952" />
-    <state width="1877" height="235" key="GridCell.Tab.0.left" timestamp="1623430686952">
+    <state width="1877" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623458165778" />
+    <state width="1877" height="235" key="GridCell.Tab.0.left" timestamp="1623458165778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623430686952" />
-    <state width="1877" height="235" key="GridCell.Tab.0.right" timestamp="1623430686952">
+    <state width="1877" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623458165778" />
+    <state width="1877" height="235" key="GridCell.Tab.0.right" timestamp="1623458165778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623430686952" />
+    <state width="1877" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623458165778" />
     <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1623429551911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

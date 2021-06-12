@@ -22,5 +22,5 @@ class LaboralExperience {
     @SerializedName("location")
     lateinit var location: String
     //@SerializedName("current_job")
-    //var current_job: Boolean = false
+    //var current_job: Boolean? = false
 }

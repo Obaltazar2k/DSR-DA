@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/option_1"
+        android:title="Agregar experiencia laboral" />
+    <item android:id="@+id/option_2"
+        android:title="Agregar educación" />
+    <item android:id="@+id/option_3"
+        android:title="Agregar certificación" />
+    <item android:id="@+id/option_4"
+        android:title="Agregar sección" />
+</menu>

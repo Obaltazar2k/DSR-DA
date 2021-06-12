@@ -3,11 +3,11 @@ package com.stardust.proyectokotlin.fragments
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.annotation.MenuRes
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -66,7 +66,59 @@ class IndependientProfileFragment : Fragment() {
         certificationRecyclerView = view.findViewById(R.id.certificationRecyclerView)
         sectionRecyclerView = view.findViewById(R.id.sectionRecylcerView)
 
+        val button = view.findViewById<Button>(R.id.menu_button)
+        button.setOnClickListener { v: View ->
+            showMenu(v, R.menu.popup_menu)
+        }
+
         return view!!
+    }
+
+    private fun showMenu(v: View, @MenuRes menuRes: Int) {
+        val popup = PopupMenu(context!!, v)
+        popup.menuInflater.inflate(menuRes, popup.menu)
+
+        popup.setOnMenuItemClickListener { item: MenuItem? ->
+
+            when (item!!.itemId) {
+                R.id.option_1 -> {
+                    val addLaboralExperienceFragment = AddLaboralExperienceFragment()
+                    addLaboralExperienceFragment.arguments = requireActivity().intent.extras
+                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.mainFrame, addLaboralExperienceFragment)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+                R.id.option_2 -> {
+                    val addEducationFragment = AddEducationFragment()
+                    addEducationFragment.arguments = requireActivity().intent.extras
+                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.mainFrame, addEducationFragment)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+                R.id.option_3 -> {
+                    val addCertificationFragment = AddCertificationFragment()
+                    addCertificationFragment.arguments = requireActivity().intent.extras
+                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.mainFrame, addCertificationFragment)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+                R.id.option_4 -> {
+                    val addSectionFragment = AddSectionFragment()
+                    addSectionFragment.arguments = requireActivity().intent.extras
+                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.mainFrame, addSectionFragment)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+            }
+
+            true
+        }
+
+        popup.show()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

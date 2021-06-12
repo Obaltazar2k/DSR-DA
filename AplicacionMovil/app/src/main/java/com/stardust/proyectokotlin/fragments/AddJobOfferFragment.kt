@@ -97,11 +97,11 @@ class AddJobOfferFragment : Fragment() {
                 //jobOffer.media = emptyList()
                 //jobOffer.photo = photo
                 JobOfferConnectionManager.uploadJobOffer(jobOffer, success = {
-                    val jobOfferListFragment = JobOfferListFragment()
-                    jobOfferListFragment.arguments = requireActivity().intent.extras
+                    val homeFragment = HomeFragment()
+                    homeFragment.arguments = requireActivity().intent.extras
 
                     val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                    transaction.replace(R.id.mainFrame, jobOfferListFragment)
+                    transaction.replace(R.id.mainFrame, homeFragment)
                     //transaction.addToBackStack(null)
                     transaction.commit()
                     Toast.makeText(requireActivity(), it,Toast.LENGTH_SHORT).show()

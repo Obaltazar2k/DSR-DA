@@ -2,6 +2,7 @@ package com.stardust.proyectokotlin.services
 
 import com.stardust.proyectokotlin.model.IndependientUser
 import com.stardust.proyectokotlin.model.JobOffer
+import com.stardust.proyectokotlin.model.LaboralExperience
 import com.stardust.proyectokotlin.model.OrganizationUser
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -73,6 +74,13 @@ interface Services {
         @Path("user_id") user_id: String?,
         @Header("Authorization") authHeader: String?
     ): Call<OrganizationUser>
+
+    @POST("users/independient_user/{user_id}/laboral_experience")
+    fun addLaboralExperience(
+        @Body laboralExperience: LaboralExperience,
+        @Path("user_id") user_id: String?,
+        @Header("Authorization") authHeader: String?
+    ): Call<ResponseBody>
 
 /*
     @GET("/2020/contacts/list.php")

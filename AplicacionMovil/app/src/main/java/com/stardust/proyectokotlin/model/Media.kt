@@ -8,7 +8,6 @@ class Media : Serializable{
     @Expose
     @SerializedName("mediaID")
     var mediaId: Int? = 0
-    @Expose
-    @SerializedName("file")
-    var file: ByteArray? = null
+    //@SerializedName("file")
+    //var file: ByteArray? = null
 }

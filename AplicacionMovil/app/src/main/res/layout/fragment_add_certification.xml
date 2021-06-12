@@ -1,14 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddCertificationFragment">
+    android:background="#FFFFFF"
+    tools:context=".fragments.AddCertificationFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Certificación"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/itemCertificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Titulo de la certificación"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemCertificationCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Nombre de la empresa emisora"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemCertificationUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="textWebEditText"
+        android:hint="Url de la certificación"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemCertificationExpeditionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Fecha de expedición"
+        android:inputType="date"
+        android:focusable="false"
+        android:clickable="true"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/itemCertificationExpirationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Fecha de expiración"
+        android:inputType="date"
+        android:focusable="false"
+        android:clickable="true"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/buttonUploadCertification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar certificación"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

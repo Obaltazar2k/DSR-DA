@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
+import com.stardust.proyectokotlin.Encrypt
 import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.isAnEmail
 import com.stardust.proyectokotlin.model.User
@@ -40,7 +41,7 @@ class UserGeneralFragment : Fragment() {
 
         bttnRegister?.setOnClickListener() {
             val email = txtEmail?.text.toString()
-            val password = txtPassword?.text.toString()
+            val password = Encrypt.hash(txtPassword?.text.toString())
             val city = txtCity?.text.toString()
             val country = txtCountry?.text.toString()
             if (email.isAnEmail()) {

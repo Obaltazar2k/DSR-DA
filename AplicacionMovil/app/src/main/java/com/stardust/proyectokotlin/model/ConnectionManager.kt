@@ -14,7 +14,7 @@ object ConnectionManager {
     private fun create(): Services {
         val retrofitBuilder = Retrofit.Builder()
         //retrofitBuilder.baseUrl("https://androiddevcourse.000webhostapp.com")
-        retrofitBuilder.baseUrl("http://192.168.100.8:8080/ricardorzan/Employex/1.0.0/")
+        retrofitBuilder.baseUrl("http://104.248.226.225:8080/ricardorzan/Employex/1.0.0/")
 
         val gsonBuilder = GsonBuilder()
         gsonBuilder.excludeFieldsWithoutExposeAnnotation()

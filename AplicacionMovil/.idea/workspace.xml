@@ -32,19 +32,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12df9aa9-29be-41b8-bfb9-ab657611db83" name="Default Changelist" comment="Se agregaron las pantallas de registro">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/CertificationConnectionManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/SectionConnectionManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/Encrypt.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddCertificationFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddCertificationFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddSectionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/fragments/AddSectionFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/Media.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/Media.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/Services.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/Services.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_certification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_certification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_section.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_section.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/ConnectionManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/RetrofitInstance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/model/RetrofitInstance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/GeneralUserConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/stardust/proyectokotlin/services/GeneralUserConnectionManager.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

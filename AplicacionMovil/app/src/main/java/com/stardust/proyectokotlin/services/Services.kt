@@ -91,4 +91,10 @@ interface Services {
         @Path("user_id") user_id: String?,
         @Header("Authorization") authHeader: String?
     ): Call<ResponseBody>
+
+    @GET("/users/new_token")
+    fun generateNewToken(
+        @Query("username") username: String?,
+        @Query("fullName") fullName: String?
+    ): Call<ResponseBody>
 }

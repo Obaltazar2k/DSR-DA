@@ -29,4 +29,20 @@ object GeneralUserConnectionManager {
                 }
         })
     }
+
+    fun generateNewToken( email: String, success: (String) -> Unit, fail: (String) -> Unit) {
+        val retIn = RetrofitInstance.getRetrofitInstance().create(Services::class.java)
+        //val signInInfo = SignInBody(email, password)
+        retIn.generateNewToken(email, "estimado usuario").enqueue(object : Callback<ResponseBody> {
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                fail("generateNewToken onFailure")
+            }
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) =
+                if (response.code() == 200) {
+                    success("Se ha enviado un nuevo código de verificación")
+                } else {
+                    fail("Error")
+                }
+        })
+    }
 }

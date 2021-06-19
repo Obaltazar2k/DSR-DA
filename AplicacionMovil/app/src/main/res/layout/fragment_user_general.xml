@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#191626"
-    tools:context=".UserGeneralFragment">
+    tools:context=".fragments.UserGeneralFragment">
     
     <Button
         android:id="@+id/buttonIndependientUser"
@@ -30,7 +30,7 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColorHint="#D3D3D3"
         app:layout_constraintBottom_toTopOf="@+id/editTextOcupation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -48,7 +48,7 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColorHint="#D3D3D3"
         app:layout_constraintBottom_toTopOf="@+id/editTextSurname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -65,7 +65,7 @@
         android:fontFamily="@font/roboto"
         android:hint="Pais"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColorHint="#D3D3D3"
         app:layout_constraintBottom_toTopOf="@+id/buttonIndependientUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -81,7 +81,7 @@
         android:fontFamily="@font/roboto"
         android:hint="Ciudad"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColorHint="#D3D3D3"
         app:layout_constraintBottom_toTopOf="@+id/editTextContactPhone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

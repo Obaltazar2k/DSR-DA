@@ -11,11 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.Token
-import com.stardust.proyectokotlin.Token.password
-import com.stardust.proyectokotlin.Token.token
-import com.stardust.proyectokotlin.Token.username
 import com.stardust.proyectokotlin.isAnEmail
-import com.stardust.proyectokotlin.model.ConnectionManager
+import com.stardust.proyectokotlin.model.User
 import com.stardust.proyectokotlin.services.GeneralUserConnectionManager
 
 
@@ -65,6 +62,16 @@ class LoginFragment : Fragment() {
                         transaction.commit()
                     }, fail = {
                         Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+                    }, extra = {
+                        var user = User()
+                        user.email = email
+                        val validationFragment = ValidationFragment(user)
+                        validationFragment.arguments = requireActivity().intent.extras
+
+                        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                        transaction.replace(R.id.mainFrame, validationFragment)
+                        //transaction.addToBackStack(null)
+                        transaction.commit()
                     })
                 } else {
                     Toast.makeText(requireActivity(), "Introduce una contraseña", Toast.LENGTH_SHORT).show()

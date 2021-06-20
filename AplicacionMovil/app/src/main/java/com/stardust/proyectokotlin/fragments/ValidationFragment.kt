@@ -10,9 +10,8 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import com.stardust.proyectokotlin.R
-import com.stardust.proyectokotlin.model.ConnectionManager
-import com.stardust.proyectokotlin.model.IndependientUser
 import com.stardust.proyectokotlin.model.User
+import com.stardust.proyectokotlin.services.GeneralUserConnectionManager
 
 class ValidationFragment(private val user: User) : Fragment() {
 
@@ -38,20 +37,11 @@ class ValidationFragment(private val user: User) : Fragment() {
         bttnBack = view!!.findViewById(R.id.imageButtonSignup)
 
         bttnValidate?.setOnClickListener() {
-            val name = txtName?.text.toString()
-            val surname = txtSurname?.text.toString()
-            val ocupation = txtOcupation?.text.toString()
-            val personalDescription = txtPersonalDescription?.text.toString()
+            val token = txtCode.text.toString()
 
-            if (name.isNotEmpty() && surname.isNotEmpty() && ocupation.isNotEmpty() && personalDescription.isNotEmpty()) {
-                var independientUser = IndependientUser()
-                independientUser.name = name
-                independientUser.surnames = surname
-                independientUser.ocupation = ocupation
-                independientUser.persoanlDescription = personalDescription
-                independientUser.user = user
+            if (token.isNotEmpty()) {
 
-                ConnectionManager.registerIndependientUser(independientUser, success = {
+                GeneralUserConnectionManager.validateUser(user.email, token, success = {
                     Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
 
                     val loginFragment = LoginFragment()
@@ -68,14 +58,18 @@ class ValidationFragment(private val user: User) : Fragment() {
             } else {
                 Toast.makeText(
                     requireActivity(),
-                    "Por favor llena todos los campos",
+                    "Por favor llena el campo",
                     Toast.LENGTH_SHORT
                 ).show()
             }
         }
 
         bttNewToken?.setOnClickListener() {
-            getFragmentManager()?.popBackStack()
+            GeneralUserConnectionManager.generateNewToken(user.email, success = {
+                Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+            }, fail = {
+                Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+            })
         }
 
         bttnBack?.setOnClickListener() {

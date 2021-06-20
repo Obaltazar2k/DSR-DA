@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.*
 import com.stardust.proyectokotlin.R
 import com.stardust.proyectokotlin.isAnEmail
-import com.stardust.proyectokotlin.model.ConnectionManager
 import com.stardust.proyectokotlin.model.OrganizationUser
 import com.stardust.proyectokotlin.model.User
+import com.stardust.proyectokotlin.services.GeneralUserConnectionManager
 
 class OrganizationSignupFragment(private val user: User) : Fragment() {
 
@@ -96,14 +96,14 @@ class OrganizationSignupFragment(private val user: User) : Fragment() {
                     organizationUser.workSector = workSector.toUpperCase()
                     organizationUser.user = user
 
-                    ConnectionManager.registerOrganizationUser(organizationUser, success = {
+                    GeneralUserConnectionManager.registerOrganizationUser(organizationUser, success = {
                         Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
                         
-                        val loginFragment = LoginFragment()
-                        loginFragment.arguments = requireActivity().intent.extras
+                        val validationFragment = ValidationFragment(user)
+                        validationFragment.arguments = requireActivity().intent.extras
 
                         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                        transaction.add(R.id.mainFrame, loginFragment)
+                        transaction.add(R.id.mainFrame, validationFragment)
                         //transaction.addToBackStack(null)
                         transaction.commit()
                     }, fail = {

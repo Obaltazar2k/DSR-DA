@@ -10,9 +10,9 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import com.stardust.proyectokotlin.R
-import com.stardust.proyectokotlin.model.ConnectionManager
 import com.stardust.proyectokotlin.model.IndependientUser
 import com.stardust.proyectokotlin.model.User
+import com.stardust.proyectokotlin.services.GeneralUserConnectionManager
 
 class IndependientSignupFragment(private val user: User) : Fragment() {
 
@@ -55,14 +55,14 @@ class IndependientSignupFragment(private val user: User) : Fragment() {
                 independientUser.persoanlDescription = personalDescription
                 independientUser.user = user
 
-                ConnectionManager.registerIndependientUser(independientUser, success = {
+                GeneralUserConnectionManager.registerIndependientUser(independientUser, success = {
                     Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
 
-                    val loginFragment = LoginFragment()
-                    loginFragment.arguments = requireActivity().intent.extras
+                    val validationFragment = ValidationFragment(user)
+                    validationFragment.arguments = requireActivity().intent.extras
 
                     val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                    transaction.add(R.id.mainFrame, loginFragment)
+                    transaction.add(R.id.mainFrame, validationFragment)
                     //transaction.addToBackStack(null)
                     transaction.commit()
                 }, fail = {

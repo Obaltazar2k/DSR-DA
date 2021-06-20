@@ -91,4 +91,17 @@ interface Services {
         @Path("user_id") user_id: String?,
         @Header("Authorization") authHeader: String?
     ): Call<ResponseBody>
+
+    @Headers("Content-Type:application/json")
+    @PATCH("users/new_token")
+    fun generateNewToken(
+        @Query("username") username: String?,
+        @Query("fullName") fullName: String?,
+    ): Call<ResponseBody>
+
+    @PATCH("users/validation")
+    fun validateUser(
+        @Query("username") username: String?,
+        @Query("token") token: String?,
+    ): Call<ResponseBody>
 }

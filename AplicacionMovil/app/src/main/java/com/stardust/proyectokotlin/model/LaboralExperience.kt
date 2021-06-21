@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 class LaboralExperience {
     @Expose
     @SerializedName("laboral_experience_id")
-    var laboral_experience_id: String? = ""
+    lateinit var laboral_experience_id: String
     @SerializedName("job_title")
     lateinit var job_title: String
     @SerializedName("end_date")

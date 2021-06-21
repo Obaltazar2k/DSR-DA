@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 public class Education {
     @Expose
     @SerializedName("education_id")
-    var education_id: String? = ""
+    lateinit var education_id: String
     @SerializedName("title")
     lateinit var title: String
     @SerializedName("end_date")

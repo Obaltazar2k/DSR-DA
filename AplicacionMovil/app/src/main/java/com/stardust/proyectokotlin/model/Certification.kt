@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 class Certification {
     @Expose
     @SerializedName("credential_id")
-    var credential_id: String? = ""
+    lateinit var credential_id: String
     @SerializedName("title")
     lateinit var title: String
     @SerializedName("expiration_date")
